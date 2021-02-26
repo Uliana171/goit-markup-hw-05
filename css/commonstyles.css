@@ -119,8 +119,10 @@ body {
 }
 
 .nav {
-  display: inline-block;
-  padding-top: 30px;
+  position: relative;
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav::after {
@@ -128,17 +130,19 @@ body {
   height: 4px;
   width: 100%;
   background-color: rgba(33, 150, 243, 1);
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
   border-radius: 2px;
   transform: scaleX(0);
   margin-top: 30px;
+  position: absolute;
+  bottom: -1px;
 }
 
 .nav:hover::after {
   transform: scaleX(1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), transform easy-in-out;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-header {
@@ -173,6 +177,7 @@ body {
 /* сіре підкреслкння в хедері */
 .page-header {
   border-bottom: 1px solid var(--gray-line);
+  justify-content: center;
 }
 
 /* сіре підкреслкння в хедері */
