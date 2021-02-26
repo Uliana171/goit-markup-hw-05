@@ -39,7 +39,7 @@ h1 {
   margin-right: auto;
 }
 
-.hero-btn {
+.btn-open {
   background-color: var(--blue-text);
   color: var(--white-text);
   font-weight: 700;
@@ -62,11 +62,56 @@ h1 {
   margin-right: auto;
 }
 
-.hero-btn:hover, .hero-btn:focus {
-border-radius: 4px;
+.btn-open:hover, .hero-btn:focus {
+  border-radius: 4px;
 }
 
+/* модальне вікно */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left:0;
+
+  width: 100%;
+  height: 100% ;
+
+  background-color:rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+  height: 528px;
+  width: 581px;
+  padding: 40px;
+
+  background-color: white;
+}
+
+.btn-close{
+  position: absolute;
+  top: 12px;
+  right: 31px;
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 6px;
+}
+
+.close-icon{
+  display: flex;
+}
+/* модальне вікно */
 /* заголовок з кнопкою */
+
 
 /* наші переваги */
 
