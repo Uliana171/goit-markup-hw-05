@@ -69,6 +69,8 @@ h1 {
 /* модальне вікно */
 
 .backdrop {
+  z-index: 2;
+
   position: fixed;
   top: 0;
   left:0;
@@ -79,14 +81,15 @@ h1 {
   background-color:rgba(0, 0, 0, 0.2);
 }
 
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  transition: 250ms ease-in ;
+  transition: 250ms ease-in;
 }
 
 .modal{
   position: absolute;
+  
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -102,13 +105,15 @@ h1 {
 
 .btn-close{
   position: absolute;
+
   top: 12px;
   right: 31px;
+
   border-radius: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
   padding: 6px;
   color: rgba(0, 0, 0, 1);
-;
 }
 
 .close-icon{
@@ -128,6 +133,7 @@ h1 {
 
 .features .container ul {
   display: flex;
+  
 }
 .features-items {
   width: 270px;
@@ -174,6 +180,7 @@ h1 {
 
 .servises {
   padding-bottom: 94px;
+  
 }
 
 .servises-list {
@@ -197,10 +204,10 @@ h1 {
   margin-bottom: 50px;
 }
 
-.servises-items::before {
+.servises-items {
   margin-right: 30px;
   position: relative;
-
+  z-index: 1;
 }
 
 .servises-image {
@@ -225,7 +232,7 @@ h1 {
   padding-top: 27px;
   padding-bottom: 27px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
- 
+
   position: absolute;
   bottom: 0;
   opacity: 0;
