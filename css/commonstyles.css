@@ -76,6 +76,8 @@ body {
 .logo:hover,
 .logo:focus {
   color: var(--link-color);
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo > .web {
@@ -89,7 +91,7 @@ body {
 } */
 
 .page-header > .container,
-.nav-list,
+nav .navigation-list,
 .contacts-header {
   display: flex;
   align-items: center; /* центрувати по вертикалі */
@@ -97,19 +99,19 @@ body {
 
 /*силки навігації в хедері */
 
-.nav-list {
+.navigation-list {
   margin-left: 93px;
 }
 
-.nav-list li {
+.navigation-list li {
   margin-right: 50px;
 }
 
-.nav-list li:last-child {
+.navigation-list li:last-child {
   margin-right: 0px;
 }
 
-.nav {
+.navgation {
   color: var(--black-text);
   font-size: 14px;
   font-style: normal;
@@ -121,16 +123,15 @@ body {
   padding-bottom: 32px;
 }
 
-.nav:hover,
-.nav:focus {
+.navgation:hover,
+.navgation:active,
+.navgation:focus {
   color: var(--blue-text);
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav:active {
-  color: orange;
-}
-
-.nav::after {
+.navgation::after {
   content: "";
   height: 4px;
   width: 100%;
@@ -146,9 +147,9 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav:hover::after,
-.nav:focus::after,
-.nav:active::after {
+.navgation:hover::after,
+.navgation:active::after,
+.navgation:focus::after {
   transform: scaleX(1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -231,6 +232,14 @@ body {
   color: var(--white-text);
 }
 
+.logo .studio:active,
+.logo .studio:hover,
+.logo .studio:focus {
+  color: var(--link-color);
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .address {
   min-width: 81px;
 }
@@ -252,6 +261,13 @@ body {
   font-size: 14px;
   font-style: normal;
   line-height: 22px;
+}
+.contacts-footer:active,
+.contacts-footer:focus,
+.contacts-footer:hover {
+  color: var(--link-color);
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-footer-list li {

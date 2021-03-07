@@ -94,8 +94,8 @@ h1 {
   left: 50%;
   transform: translate(-50%,-50%);
   
-  height: 528px;
-  width: 581px;
+  height: 581px;
+  width: 528px;
   padding: 40px;
 
   background-color: white;
@@ -241,8 +241,8 @@ h1 {
 .servises-label,
 .servises-label:focus {
   opacity: 1;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity linear;
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -329,10 +329,14 @@ h1 {
   padding: 12px;
 }
 
-.social-link:hover, .social-link:focus{
+.social-link:hover,
+.social-link:focus{
 color: rgba(255,255,255,1);
 background-color: var(--blue-text);
 border-radius: 50px;
+
+transform: scaleX(1);
+transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon{
@@ -385,9 +389,12 @@ fill: currentColor
   border-radius: 4px;
 }
 
-.clients-link:hover, .clients-link:focus{
+.clients-link:hover,
+.clients-link:focus{
   color: var(--blue-text);
   border-color: var(--blue-text);
+  transform: scaleX(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icons{
